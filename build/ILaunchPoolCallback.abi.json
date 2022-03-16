@@ -1,0 +1,45 @@
+{
+	"ABI version": 2,
+	"version": "2.2",
+	"header": ["time", "expire"],
+	"functions": [
+		{
+			"name": "launchPoolHasBeenActivatedCallback",
+			"inputs": [
+				{"name":"callbackId","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "launchPoolAwaitTokensCallback",
+			"inputs": [
+				{"name":"callbackId","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "investmentViaBridgeDeclinedCallback",
+			"inputs": [
+				{"name":"callbackId","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "newInvestmentCallback",
+			"inputs": [
+				{"name":"callbackId","type":"uint32"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	],
+	"fields": [
+	]
+}

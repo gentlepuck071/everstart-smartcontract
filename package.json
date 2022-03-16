@@ -1,0 +1,15 @@
+{
+  "name": "ever_start",
+  "version": "1.0.0",
+  "description": "",
+  "directories": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "chai-as-promised": "^7.1.1",
+    "commander": "^8.3.0"
+  }
+}

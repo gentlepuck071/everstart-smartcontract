@@ -1,0 +1,136 @@
+{
+	"ABI version": 2,
+	"version": "2.2",
+	"header": ["time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"_owner","type":"address"},
+				{"name":"_sendGasTo","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "deployLaunchPool",
+			"inputs": [
+				{"name":"_poolOwner","type":"address"},
+				{"name":"_launchTokenRoot","type":"address"},
+				{"name":"_startTime","type":"uint32"},
+				{"name":"_endTime","type":"uint32"},
+				{"components":[{"name":"unfreezeTime","type":"uint32"},{"name":"percent","type":"uint16"}],"name":"_vestingPeriods","type":"tuple[]"},
+				{"name":"_softCap","type":"uint128"},
+				{"name":"_hardCap","type":"uint128"},
+				{"name":"_sendGasTo","type":"address"},
+				{"components":[{"name":"projectName","type":"string"},{"name":"projectDescription","type":"string"},{"name":"projectImageUrl","type":"string"},{"name":"projectLandingUrl","type":"string"},{"components":[{"name":"name","type":"string"},{"name":"link","type":"string"}],"name":"projectSocialLinks","type":"tuple[]"}],"name":"_additionalProjectInfo","type":"tuple"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onPoolDeploy",
+			"inputs": [
+				{"name":"poolDeployNonce","type":"uint64"},
+				{"name":"poolOwner","type":"address"},
+				{"name":"sendGasTo","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getLaunchPoolAddress",
+			"inputs": [
+				{"name":"poolNumber","type":"uint32"}
+			],
+			"outputs": [
+				{"name":"value0","type":"address"}
+			]
+		},
+		{
+			"name": "setCode",
+			"inputs": [
+				{"name":"newCode","type":"cell"},
+				{"name":"sendGasTo","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "transferOwnership",
+			"inputs": [
+				{"name":"newOwner","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "renounceOwnership",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "owner",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"owner","type":"address"}
+			]
+		},
+		{
+			"name": "poolsCount",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"poolsCount","type":"uint64"}
+			]
+		},
+		{
+			"name": "version",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"version","type":"uint32"}
+			]
+		}
+	],
+	"data": [
+		{"key":1,"name":"launchPoolParticipationCode","type":"cell"},
+		{"key":2,"name":"launchPoolCode","type":"cell"},
+		{"key":3,"name":"deploySeed","type":"uint128"}
+	],
+	"events": [
+		{
+			"name": "NewLaunchPool",
+			"inputs": [
+				{"name":"pool","type":"address"},
+				{"name":"poolDeployNonce","type":"uint64"},
+				{"name":"poolOwner","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "OwnershipTransferred",
+			"inputs": [
+				{"name":"previousOwner","type":"address"},
+				{"name":"newOwner","type":"address"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"owner","type":"address"},
+		{"name":"launchPoolParticipationCode","type":"cell"},
+		{"name":"launchPoolCode","type":"cell"},
+		{"name":"deploySeed","type":"uint128"},
+		{"name":"poolsCount","type":"uint64"},
+		{"name":"version","type":"uint32"}
+	]
+}

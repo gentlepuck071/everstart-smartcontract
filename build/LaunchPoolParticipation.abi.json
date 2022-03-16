@@ -1,0 +1,106 @@
+{
+	"ABI version": 2,
+	"version": "2.2",
+	"header": ["time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "increaseDeposit",
+			"inputs": [
+				{"name":"_depositNonce","type":"uint32"},
+				{"name":"_depositAmount","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getDetails",
+			"inputs": [
+				{"name":"answerId","type":"uint32"}
+			],
+			"outputs": [
+				{"components":[{"name":"launchPool","type":"address"},{"name":"user","type":"address"},{"name":"depositAmount","type":"uint128"},{"name":"lastClaim","type":"uint32"},{"name":"sulpurReturned","type":"bool"},{"name":"depositReturned","type":"bool"}],"name":"value0","type":"tuple"}
+			]
+		},
+		{
+			"name": "claimReward",
+			"inputs": [
+				{"name":"callbackId","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "returnDepositSulpur",
+			"inputs": [
+				{"name":"callbackId","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "returnDeposit",
+			"inputs": [
+				{"name":"callbackId","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "transferOwnership",
+			"inputs": [
+				{"name":"newOwner","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "renounceOwnership",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "owner",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"owner","type":"address"}
+			]
+		}
+	],
+	"data": [
+		{"key":1,"name":"launchPool","type":"address"},
+		{"key":2,"name":"user","type":"address"}
+	],
+	"events": [
+		{
+			"name": "OwnershipTransferred",
+			"inputs": [
+				{"name":"previousOwner","type":"address"},
+				{"name":"newOwner","type":"address"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"owner","type":"address"},
+		{"name":"launchPool","type":"address"},
+		{"name":"user","type":"address"},
+		{"name":"depositAmount","type":"uint128"},
+		{"name":"lastClaim","type":"uint32"},
+		{"name":"sulpurReturned","type":"bool"},
+		{"name":"depositReturned","type":"bool"}
+	]
+}

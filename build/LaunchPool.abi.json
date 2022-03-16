@@ -1,0 +1,291 @@
+{
+	"ABI version": 2,
+	"version": "2.2",
+	"header": ["time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"_owner","type":"address"},
+				{"name":"_launchTokenRoot","type":"address"},
+				{"name":"_startTime","type":"uint32"},
+				{"name":"_endTime","type":"uint32"},
+				{"components":[{"name":"unfreezeTime","type":"uint32"},{"name":"percent","type":"uint16"}],"name":"_vestingPeriods","type":"tuple[]"},
+				{"name":"_softCap","type":"uint128"},
+				{"name":"_hardCap","type":"uint128"},
+				{"name":"_sendGasTo","type":"address"},
+				{"components":[{"name":"projectName","type":"string"},{"name":"projectDescription","type":"string"},{"name":"projectImageUrl","type":"string"},{"name":"projectLandingUrl","type":"string"},{"components":[{"name":"name","type":"string"},{"name":"link","type":"string"}],"name":"projectSocialLinks","type":"tuple[]"}],"name":"_additionalProjectInfo","type":"tuple"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onReceiveTONsFromBridgeCallback",
+			"inputs": [
+				{"components":[{"name":"amount","type":"uint128"},{"name":"user","type":"address"},{"name":"creditor","type":"address"},{"name":"recipient","type":"address"},{"name":"tokenAmount","type":"uint128"},{"name":"tonAmount","type":"uint128"},{"name":"swapType","type":"uint8"},{"components":[{"name":"numerator","type":"uint128"},{"name":"denominator","type":"uint128"}],"name":"slippage","type":"tuple"},{"name":"layer3","type":"cell"}],"name":"decodedEventData","type":"tuple"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getDetails",
+			"inputs": [
+				{"name":"answerId","type":"uint32"}
+			],
+			"outputs": [
+				{"components":[{"name":"launchTokenRoot","type":"address"},{"name":"tokenWallet","type":"address"},{"name":"owner","type":"address"},{"name":"factory","type":"address"},{"name":"state","type":"uint8"},{"name":"tokensSupply","type":"uint128"},{"name":"totalRaised","type":"uint128"},{"name":"totalWithdraw","type":"uint128"},{"name":"totalReturned","type":"uint128"},{"name":"startTime","type":"uint32"},{"name":"endTime","type":"uint32"},{"name":"softCap","type":"uint128"},{"name":"hardCap","type":"uint128"},{"components":[{"name":"unfreezeTime","type":"uint32"},{"name":"percent","type":"uint16"}],"name":"vestingPeriods","type":"tuple[]"},{"components":[{"name":"projectName","type":"string"},{"name":"projectDescription","type":"string"},{"name":"projectImageUrl","type":"string"},{"name":"projectLandingUrl","type":"string"},{"components":[{"name":"name","type":"string"},{"name":"link","type":"string"}],"name":"projectSocialLinks","type":"tuple[]"}],"name":"additionalProjectInfo","type":"tuple"},{"name":"amountOfInvestors","type":"uint32"}],"name":"value0","type":"tuple"}
+			]
+		},
+		{
+			"name": "getLaunchPoolParticipationAddress",
+			"inputs": [
+				{"name":"_user","type":"address"}
+			],
+			"outputs": [
+				{"name":"value0","type":"address"}
+			]
+		},
+		{
+			"name": "withdrawEVERs",
+			"inputs": [
+				{"name":"amount","type":"uint128"},
+				{"name":"to","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "withdrawTokens",
+			"inputs": [
+				{"name":"to","type":"address"},
+				{"name":"sendGasTo","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "finishFundraising",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "processReturnDepositSulpur",
+			"inputs": [
+				{"name":"userDeposit","type":"uint128"},
+				{"name":"user","type":"address"},
+				{"name":"callbackId","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "processReturnDeposit",
+			"inputs": [
+				{"name":"userDeposit","type":"uint128"},
+				{"name":"user","type":"address"},
+				{"name":"callbackId","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "processClaimReward",
+			"inputs": [
+				{"name":"claimFrom","type":"uint32"},
+				{"name":"claimTo","type":"uint32"},
+				{"name":"userDeposit","type":"uint128"},
+				{"name":"user","type":"address"},
+				{"name":"callbackId","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "buildBridgeLayer3Payload",
+			"inputs": [
+				{"name":"_gasForUser","type":"uint128"},
+				{"name":"_callbackId","type":"uint32"}
+			],
+			"outputs": [
+				{"name":"value0","type":"cell"}
+			]
+		},
+		{
+			"name": "buildCallbackIdPayload",
+			"inputs": [
+				{"name":"_callbackId","type":"uint32"}
+			],
+			"outputs": [
+				{"name":"value0","type":"cell"}
+			]
+		},
+		{
+			"name": "onAcceptTokensTransfer",
+			"inputs": [
+				{"name":"tokenRoot","type":"address"},
+				{"name":"amount","type":"uint128"},
+				{"name":"sender","type":"address"},
+				{"name":"senderWallet","type":"address"},
+				{"name":"remainingGasTo","type":"address"},
+				{"name":"payload","type":"cell"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onDepositIncreased",
+			"inputs": [
+				{"name":"_depositNonce","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onTokenWallet",
+			"inputs": [
+				{"name":"value","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "transferOwnership",
+			"inputs": [
+				{"name":"newOwner","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "renounceOwnership",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "owner",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"owner","type":"address"}
+			]
+		}
+	],
+	"data": [
+		{"key":1,"name":"launchPoolParticipationCode","type":"cell"},
+		{"key":2,"name":"deployNonce","type":"uint64"},
+		{"key":3,"name":"factory","type":"address"}
+	],
+	"events": [
+		{
+			"name": "NewInvestment",
+			"inputs": [
+				{"name":"poolPartisipation","type":"address"},
+				{"name":"owner","type":"address"},
+				{"name":"depositAmount","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "SurplusDepositReturned",
+			"inputs": [
+				{"name":"user","type":"address"},
+				{"name":"surplusDeposit","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "DepositReturned",
+			"inputs": [
+				{"name":"user","type":"address"},
+				{"name":"deposit","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "ClaimRewarded",
+			"inputs": [
+				{"name":"user","type":"address"},
+				{"name":"sum","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "LaunchPoolDeployed",
+			"inputs": [
+				{"name":"factory","type":"address"},
+				{"name":"deployNonce","type":"uint64"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "launchPoolAwaitTokensCallback",
+			"inputs": [
+				{"name":"factory","type":"address"},
+				{"name":"deployNonce","type":"uint64"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "LaunchPoolHasBeenActivated",
+			"inputs": [
+				{"name":"factory","type":"address"},
+				{"name":"deployNonce","type":"uint64"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "InvestmentViaBridgeDeclined",
+			"inputs": [
+				{"name":"user","type":"address"},
+				{"name":"sum","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "OwnershipTransferred",
+			"inputs": [
+				{"name":"previousOwner","type":"address"},
+				{"name":"newOwner","type":"address"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"owner","type":"address"},
+		{"name":"launchPoolParticipationCode","type":"cell"},
+		{"name":"deployNonce","type":"uint64"},
+		{"name":"factory","type":"address"},
+		{"name":"startTime","type":"uint32"},
+		{"name":"endTime","type":"uint32"},
+		{"components":[{"name":"unfreezeTime","type":"uint32"},{"name":"percent","type":"uint16"}],"name":"vestingPeriods","type":"tuple[]"},
+		{"name":"softCap","type":"uint128"},
+		{"name":"hardCap","type":"uint128"},
+		{"name":"state","type":"uint8"},
+		{"name":"tokensSupply","type":"uint128"},
+		{"name":"totalRaised","type":"uint128"},
+		{"name":"totalWithdraw","type":"uint128"},
+		{"name":"totalReturned","type":"uint128"},
+		{"components":[{"name":"user","type":"address"},{"name":"amount","type":"uint128"},{"name":"sendGasTo","type":"address"},{"name":"nonce","type":"uint32"}],"name":"deposits","type":"map(uint64,tuple)"},
+		{"name":"depositNonce","type":"uint32"},
+		{"name":"launchTokenRoot","type":"address"},
+		{"name":"tokenWallet","type":"address"},
+		{"components":[{"name":"projectName","type":"string"},{"name":"projectDescription","type":"string"},{"name":"projectImageUrl","type":"string"},{"name":"projectLandingUrl","type":"string"},{"components":[{"name":"name","type":"string"},{"name":"link","type":"string"}],"name":"projectSocialLinks","type":"tuple[]"}],"name":"additionalProjectInfo","type":"tuple"},
+		{"name":"amountOfInvestors","type":"uint32"}
+	]
+}
